@@ -8,7 +8,7 @@ import {
     StyleSheet
   } from 'react-native';
 
-
+//this dummy comment
   export default class ReviewsList extends Component {
 
     constructor(props){
