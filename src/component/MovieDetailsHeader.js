@@ -16,19 +16,13 @@ import {
 import FontAwesome, { Icons } from 'react-native-fontawesome';
 
 import ImageSlider from './ImageSlider';
-
-const instructions = Platform.select({
-  ios: 'Press Cmd+R to reload,\n' +
-    'Cmd+D or shake for dev menu',
-  android: 'Double tap R on your keyboard to reload,\n' +
-    'Shake or press menu button for dev menu',
-});
+import TabViewDetails from './TabViewDetails';
 
 const HEADER_MAX_HEIGHT = 300;
 const HEADER_MIN_HEIGHT = Platform.OS === "ios" ? 60 : 73;
 const HEADER_SCROLL_DISTANCE = HEADER_MAX_HEIGHT - HEADER_MIN_HEIGHT;
 
-export default class App extends Component {
+export default class MovieDetailsHeader extends Component {
   constructor(props) {
     super(props);
 
@@ -41,11 +35,7 @@ export default class App extends Component {
     const data = Array.from({ length: 30 });
     return (
       <View style={styles.scrollViewContent}>
-        {data.map((_, i) => (
-          <View key={i} style={styles.row}>
-            <Text>{i}</Text>
-          </View>
-        ))}
+      
       </View>
     );
   }
@@ -96,6 +86,7 @@ export default class App extends Component {
 
           {this._renderScrollViewContent()}
         </Animated.ScrollView>
+       
         <Animated.View
           style={[
             styles.header,
