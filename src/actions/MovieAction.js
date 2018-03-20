@@ -18,9 +18,12 @@ export function fetchMovieDetails(movieID) {
     return (dispatch) => {
         dispatch(getMovieData())
         fetch("https://api.themoviedb.org/3/movie/"+movieID+"?api_key=1b31282aebdebc34884006adfac40bfb&language=en-US")
-            .then(res => dispatch(getMovieDataSuccess(res._bodyText)))
+            .then(response => response.json())
+            .then(responseJson => {
+                dispatch(getMovieDataSuccess(responseJson))
+            })
             .catch(err => dispatch(getMovieDataFailure(err)))
-
+//dispatch(getMovieDataSuccess(json.data._55))
     }
 }
 
@@ -65,7 +68,7 @@ function getListDataFailure() {
 }
 
 function getMovieDataSuccess(data) {
-    //console.log("getMovieDataSuccess >>>>>",data);
+ // console.log("getMovieDataSuccess >>>>>",data);
     return {
         type: FETCHING_MOVIE_DETAILS_SUCCESS,
         data

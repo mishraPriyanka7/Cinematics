@@ -9,6 +9,7 @@ import { IndicatorViewPager, PagerDotIndicator } from 'rn-viewpager'
 import FontAwesome, { Icons } from 'react-native-fontawesome';
 //import { TrianglePagerView, SquarePagerView, CirclePagerView } from '../components/PagerItemView'
 import TabViewDetails from './TabViewDetails';
+import { IMAGE_BASE_URL, IMAGE_BASE_URL_500 } from "../utils/constants";
 
 var Dimensions = require('Dimensions');
 
@@ -30,7 +31,9 @@ export default class ImageSlider extends Component {
     _setBgColor = Animated.event([{ bgColor: this.state.bgColor }])
 
     render() {
-        console.log("ImageSlider Render >>>",this.props.data);
+        console.log("ImageSlider Render >>>",this.props.data.MovieDetails.backdrop_path);
+        console.log("Image Path >>",IMAGE_BASE_URL + this.props.data.MovieDetails.poster_path)
+        //console.log("ImageSlider Render >>>" + JSON.stringify(this.props.data.MovieDetails ? (this.props.data.MovieDetails._55?this.props.data.MovieDetails._55.backdrop_path:''):''));
         let bgColor = this.state.bgColor.interpolate({
             inputRange: [0, 1, 2],
             outputRange: ['hsl(187, 74%, 47%)', 'hsl(89, 47%, 54%)', 'hsl(12, 97%, 59%)']
@@ -77,9 +80,9 @@ export default class ImageSlider extends Component {
 
                     onPageSelected={(p) => console.log(p)}>
            
-                        <Image source={{ uri: 'https://image.tmdb.org/t/p/w500/rGE9sOt1jOtKtb3bARi33Eg1xfK.jpg' }} />
-                        <Image source={{ uri: 'https://image.tmdb.org/t/p/w500/rGE9sOt1jOtKtb3bARi33Eg1xfK.jpg' }} />
-                        <Image source={{ uri: 'https://image.tmdb.org/t/p/w500/rGE9sOt1jOtKtb3bARi33Eg1xfK.jpg' }} />
+                        <Image source={{ uri: IMAGE_BASE_URL_500 + this.props.data.MovieDetails.poster_path }} />
+                        <Image source={{ uri: IMAGE_BASE_URL_500 + this.props.data.MovieDetails.poster_path }} />
+                        <Image source={{ uri: IMAGE_BASE_URL_500 + this.props.data.MovieDetails.poster_path }} />
 
                  
 
@@ -92,7 +95,7 @@ export default class ImageSlider extends Component {
                             width: 80,
                             paddingRight:20
                         }}
-                        source={{ uri: 'https://image.tmdb.org/t/p/w500/rGE9sOt1jOtKtb3bARi33Eg1xfK.jpg' }}
+                        source={{ uri: IMAGE_BASE_URL + this.props.data.MovieDetails.poster_path }}
                     />
                 </View>
 
@@ -106,7 +109,7 @@ export default class ImageSlider extends Component {
                         </View>
 
                         <View>
-                                 <Text style={styles.title}>DC Legends of Tomorrow </Text>
+                                 <Text style={styles.title}>{this.props.data.MovieDetails.original_title} </Text>
                        </View>    
                        <View>
                        <Text style={{color: '#FFF',fontSize:12}}>1 hr 46 mins</Text>  

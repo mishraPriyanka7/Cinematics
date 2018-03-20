@@ -34,13 +34,13 @@ class MovieDashboard extends Component {
 
 
 render() {
-  console.log("MovieDashboard render >>>",this.props.MovieDetails.MovieDetails); // The Movie Details as per ID
+  //console.log("MovieDashboard render >>>",this.props.MovieDetails.MovieDetails); // The Movie Details as per ID
     return (
       <ParallaxScrollView
         parallaxHeaderHeight={300}
         renderForeground={() => (
          <View style={{ height: 300, flex: 1}}>
-            <ImageSlider data={this.props.MovieDetails.MovieDetails}/>
+            <ImageSlider data={this.props.MovieDetails}/>
           </View> 
         )}>
         <View style={{ height:1200 }}>
