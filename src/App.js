@@ -6,7 +6,7 @@
 
 import React, { Component } from 'react';
 import { Provider } from 'react-redux';
-import RouterComponent from '../src/component/TabViewDetails';
+import RouterComponent from '../src/router';
 import configureStore from './store/configureStore';
 console.disableYellowBox = true; //Disables the warning in production
 

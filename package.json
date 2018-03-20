@@ -11,7 +11,9 @@
     "react-native": "0.54.1",
     "react-native-fontawesome": "^5.7.0",
     "react-native-gesture-handler": "^1.0.0-alpha.41",
+    "react-native-router-flux": "^4.0.0-beta.28",
     "react-native-tab-view": "^0.0.74",
+    "react-native-view-more-text": "^1.4.3",
     "react-redux": "^5.0.7",
     "redux": "^3.7.2",
     "redux-thunk": "^2.2.0"

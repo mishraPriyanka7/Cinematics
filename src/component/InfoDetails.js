@@ -29,7 +29,13 @@ import {
             data: ratingList,
             isLoading: true,
             dataSource:[],
-            similarMoviesList: [],      
+            similarMoviesList: [],
+            ReleaseDate:'',
+            DVDReleaseDate:'',
+            DirectedBy:'',
+            Budget:'',
+            Rvenue:'',
+            overView:'',      
         };
     }
 
@@ -46,26 +52,44 @@ import {
     }
 
     componentDidMount() {
-    
-        return fetch('https://api.themoviedb.org/3/movie/2/similar?api_key=1b31282aebdebc34884006adfac40bfb&language=en-US&page=1')
-          .then((response) => response.json())
-          .then((responseJson) => {
-            this.setState({
-              isLoading: false,
-              dataSource: responseJson.results
-              
 
-            }, function() {
-              // In this block you can do something with new state.
-            });
-           // alert(JSON.stringify(responseJson.results))
-          })
-          .catch((error) => {
-            console.error(error);
+        return fetch('https://api.themoviedb.org/3/movie/284053?api_key=1b31282aebdebc34884006adfac40bfb&language=en-US')
+        .then((response) => response.json())
+        .then((responseJson) => {
+          this.setState({
+            isLoading: false,
+            overView: responseJson.overview,
+            ReleaseDate: responseJson.release_date,
+            Budget: responseJson.budget,
+            Rvenue: responseJson.revenue
+         
+          }, function() {
+            // In this block you can do something with new state.
           });
+         // alert(JSON.stringify(responseJson.overview))
+        })
+        .catch((error) => {
+          console.error(error);
+        });
 
-      }
-      
+        // return fetch('https://api.themoviedb.org/3/movie/2/similar?api_key=1b31282aebdebc34884006adfac40bfb&language=en-US&page=1')
+        // .then((response) => response.json())
+        // .then((responseJson) => {
+        //     this.setState({
+        //     isLoading: false,
+        //     dataSource: responseJson.results
+
+        //     }, function() {
+        //     // In this block you can do something with new state.
+        //     });
+        // // alert(JSON.stringify(responseJson.results))
+        // })
+        // .catch((error) => {
+        //     console.error(error);
+        // });
+    }
+     
+  
 
     render(){
 
@@ -76,7 +100,8 @@ import {
               </View>
             );
           }
-      
+
+         
         return(
 
             <View style={Styles.container}>
@@ -117,15 +142,12 @@ import {
                 
                     <View style={{marginLeft:10}}>
                         <Text style={{fontSize:15, marginTop:10}}>
-                            An other-wordly story,
-                            set against the backdrop of cold war era America circa 1962, 
-                            where a mute janitor working at lab falls in love with an amphibious 
-                            man begai held capital there and devises a plan to help him escape.
+                            {this.state.overView}
                         </Text>
                         <View style={{marginTop:10}}/>
                         <View style={Styles.textStyle}>
                             <Text style={Styles.textFontStyle}>Relase Date:</Text>
-                            <Text style={Styles.textDetailsStyle}>December 22, 2017</Text>
+                            <Text style={Styles.textDetailsStyle}>{this.state.ReleaseDate}</Text>
                         </View>
                         
                         <View style={Styles.textStyle}>
@@ -140,12 +162,12 @@ import {
 
                         <View style={Styles.textStyle}>
                             <Text style={Styles.textFontStyle}>Budget:</Text>
-                            <Text style={Styles.textDetailsStyle}>$19,500,0000</Text>
+                            <Text style={Styles.textDetailsStyle}>{this.state.Budget}</Text>
                         </View>
 
                         <View style={Styles.textStyle}>
                             <Text style={Styles.textFontStyle}>Revenue:</Text>
-                            <Text style={Styles.textDetailsStyle}>$127.458,683</Text>
+                            <Text style={Styles.textDetailsStyle}>{this.state.Rvenue}</Text>
                         </View>
 
                          <View style={{height:1, backgroundColor:'#dddcdc', margin:5}}></View>
@@ -179,57 +201,48 @@ import {
 
                 </View>
 
-                <View style={{flex:0.4,margin:10,}}>
+                <View style={{flex:0.4,margin:15,}}>
                     
                     <View style={{height:1, backgroundColor:'#dddcdc'}}></View>
-                    
-                    <View style={{flex:0.2, flexDirection:'row', marginTop:10}}>
+              
+                    <View style={{flexDirection:'row', marginTop:10}}>
                         <Text style={{ alignItems:'flex-start', justifyContent:'flex-start',fontSize:16, margin:5}}>
                             More from Guillermo del Toro
                         </Text>
-                        <View style={{flex:1, alignItems:'center', justifyContent:'flex-end'}}>
+                        <View style={{flex:1, alignItems:'flex-end', justifyContent:'flex-end'}}>
                         <Text style={{ fontSize:16,margin:5, color:'green'}}>
                             View All
                         </Text>
                         </View>
                     </View>   
 
-                    <View style={{flex:0.8, flexDirection:'row', marginTop:10}}>
-                           <FlatList
-    
-                                data={ this.state.dataSource }
-                                horizontal={true}
-                                renderItem={({item}) => 
-                                <View>
-                                <View style = {{flex:1, flexDirection:'column', margin:2,
-                                        justifyContent:'center'}}>
-                                        <View style={{justifyContent:'center'}}>
-                                        <TouchableOpacity activeOpacity = { .5 }>
-                                                <Image 
-                                                    source={{uri: "http://image.tmdb.org/t/p/w185"+item.backdrop_path}}
-                                                    style={{width:130, height:130, margin:2}}>
-                                                </Image>
-
-                                        </TouchableOpacity>
-                                        </View>
-                                            
-                                        <View style = {{justifyContent:'center',alignItems:'center', marginTop:10}}>
-                                                <Text style={{fontSize:15}}>{item.title}</Text>
-                                                <Text style={{fontSize:13}}>{item.popularity}</Text>
-                                        </View>
-                                    
-                                </View>
-                                </View>
-                                
-                                }
-                            />
+                    <View> 
+                        <SimilarMovies moviesData={this.state.similarMoviesList} />
                     </View>
+
+                    
                 </View>
-                
-                <View> 
-                    <SimilarMovies moviesData={this.state.similarMoviesList} />
-               </View>
-                                
+
+                <View style={{flex:0.4,margin:15,}}>
+                    
+                    <View style={{height:1, backgroundColor:'#dddcdc'}}></View>
+
+                    <View style={{flexDirection:'row', marginTop:10}}>
+                        <Text style={{ alignItems:'flex-start', justifyContent:'flex-start',fontSize:16, margin:5}}>
+                            similarMovie
+                        </Text>
+                        <View style={{flex:1, alignItems:'flex-end', justifyContent:'flex-end'}}>
+                        <Text style={{ fontSize:16,margin:5, color:'green'}}>
+                            View All
+                        </Text>
+                        </View>
+                    </View> 
+                    
+                    <View> 
+                        <SimilarMovies moviesData={this.state.similarMoviesList} />
+                </View>
+
+                </View>      
             </ScrollView>
             </View>
         );
