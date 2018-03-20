@@ -83,7 +83,7 @@ export default class MovieDetailsHeader extends Component {
             [{ nativeEvent: { contentOffset: { y: this.state.scrollY } } }],
             { useNativeDriver: true }
           )}>
-
+ 
           {this._renderScrollViewContent()}
         </Animated.ScrollView>
        
@@ -113,8 +113,9 @@ export default class MovieDetailsHeader extends Component {
             }
           ]}>
           <Text style={styles.title}>Title</Text>
-
+          
         </Animated.View>
+        
       </View>
     );
   }

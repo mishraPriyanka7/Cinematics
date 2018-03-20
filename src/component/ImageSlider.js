@@ -30,6 +30,7 @@ export default class ImageSlider extends Component {
     _setBgColor = Animated.event([{ bgColor: this.state.bgColor }])
 
     render() {
+        console.log("ImageSlider Render >>>",this.props.data);
         let bgColor = this.state.bgColor.interpolate({
             inputRange: [0, 1, 2],
             outputRange: ['hsl(187, 74%, 47%)', 'hsl(89, 47%, 54%)', 'hsl(12, 97%, 59%)']
@@ -88,19 +89,20 @@ export default class ImageSlider extends Component {
                     <Image
                         style={{
                             height: 110,
-                            width: 80
+                            width: 80,
+                            paddingRight:20
                         }}
                         source={{ uri: 'https://image.tmdb.org/t/p/w500/rGE9sOt1jOtKtb3bARi33Eg1xfK.jpg' }}
                     />
                 </View>
 
                 <Animated.View
-                    style={{ height: 100, backgroundColor: "transparent" }}>
+                    style={{ height: 100,marginLeft:20, backgroundColor: "transparent" }}>
                     <View style={styles.ratingHeader}>
                         <View style={{flexDirection:'row'}}>
-                        <Text style={styles.textBorder}>N/A</Text>  
-                        <Text style={{fontWeight:'bold',color: '#506166',fontSize:12}}>2018</Text>  
-                        <Text style={{color: '#506166',fontSize:12}}>1 hr 46 mins</Text>  
+                        <Text style={styles.textBorder}>N/A</Text> 
+                        <Text style={{fontWeight:'bold',color: '#506166',fontSize:12,marginLeft:10}}>2018</Text>  
+                        <Text style={{color: '#506166',fontSize:12,marginLeft:10}}>1 hr 46 mins</Text>  
                         </View>
 
                         <View>

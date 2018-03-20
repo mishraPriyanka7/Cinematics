@@ -13,6 +13,7 @@ import {
   } from 'react-native';
   import { connect } from 'react-redux'
   import { bindActionCreators } from 'redux';
+  import FontAwesome, { Icons } from 'react-native-fontawesome';
 
   import ratingList from '../component/common/RateListJson';
   import SimilarMovies from '../component/common/SimilarMovies';
@@ -25,11 +26,7 @@ import {
         super(props);
 
         this.state={
-            
-            data: ratingList,
-            isLoading: true,
-            dataSource:[],
-            similarMoviesList: [],      
+            data: this.props.data,
         };
     }
 
@@ -38,10 +35,10 @@ import {
      }
  
      componentWillReceiveProps(nextProps) {
-         if (nextProps.MovieListData != '' && nextProps.MovieListData != undefined) {
-            this.setState({ similarMoviesList: nextProps.MovieListData.SimilarMoviesListData.results }) // this will update state to re-render ui
-            //alert(JSON.stringify(nextProps.MovieListData.SimilarMoviesListData.results));
-         }
+        //  if (nextProps.MovieListData != '' && nextProps.MovieListData != undefined) {
+        //     this.setState({ similarMoviesList: nextProps.MovieListData.SimilarMoviesListData.results }) // this will update state to re-render ui
+        //     //alert(JSON.stringify(nextProps.MovieListData.SimilarMoviesListData.results));
+        //  }
         
     }
 
@@ -129,7 +126,7 @@ import {
                         </View>
                         
                         <View style={Styles.textStyle}>
-                            <Text style={Styles.textFontStyle}>DVD Relase Date:</Text>
+                            <Text style={Styles.textFontStyle}>DVD Relase Date:</Text><FontAwesome>{Icons.chevronLeft}</FontAwesome>
                             <Text style={Styles.textDetailsStyle}>March 13,2018</Text>
                         </View>
 
