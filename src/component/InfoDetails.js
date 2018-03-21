@@ -45,8 +45,10 @@ import {
  
      componentWillReceiveProps(nextProps) {
          if (nextProps.MovieListData != '' && nextProps.MovieListData != undefined) {
+
             this.setState({ similarMoviesList: nextProps.MovieListData.MovieListData.results}) // this will update state to re-render ui
            // alert(JSON.stringify(nextProps.MovieListData.MovieListData.results));
+
          }
         
     }
