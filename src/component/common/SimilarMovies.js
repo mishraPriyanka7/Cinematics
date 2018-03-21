@@ -28,22 +28,9 @@ export default class SimilarMovies extends Component {
     render(){
         return (
 
-            <View style={{flex:1, margin:10,}}>
+            <View style={{flex:1, margin:0}}>
                     
-                <View style={{height:1, backgroundColor:'#dddcdc'}}></View>
-            
-                <View style={{flex:0.2, flexDirection:'row', marginTop:10}}>
-                    <Text style={{ alignItems:'flex-start', justifyContent:'flex-start',fontSize:16, margin:5}}>
-                        similarMovie
-                    </Text>
-                    <View style={{flex:1, alignItems:'flex-end', justifyContent:'flex-end'}}>
-                    <Text style={{ fontSize:16,margin:5, color:'green'}}>
-                        View All
-                    </Text>
-                    </View>
-                </View>   
-
-                <View style={{flex:0.8, flexDirection:'row', marginTop:10}}>
+             <View style={{marginTop:5}}>
                     
                     <FlatList
                             data={ this.state.movieList }

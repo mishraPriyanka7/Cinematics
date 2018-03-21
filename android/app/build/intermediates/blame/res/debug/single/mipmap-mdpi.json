@@ -1,5 +1,9 @@
 [
     {
+        "merged": "/home/priyankatiwari/Priyanka_tiwari/ReactNative/Assignment2/priyanka/Cinematics/android/app/build/intermediates/res/merged/debug/mipmap-mdpi/ic_launcher.png",
+        "source": "/home/priyankatiwari/Priyanka_tiwari/ReactNative/Assignment2/priyanka/Cinematics/android/app/src/main/res/mipmap-mdpi/ic_launcher.png"
+    },
+    {
         "merged": "/Users/sdnmacmini36/Desktop/Roshan/Cinematics/android/app/build/intermediates/res/merged/debug/mipmap-mdpi/ic_launcher.png",
         "source": "/Users/sdnmacmini36/Desktop/Roshan/Cinematics/android/app/src/main/res/mipmap-mdpi/ic_launcher.png"
     }

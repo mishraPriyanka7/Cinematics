@@ -11,8 +11,16 @@ const initialLayout = {
     width: Dimensions.get('window').width,
 };
 
+  //  alert("tab view details : "+this.props.data.id);
 
-export default class TabBarComponent extends Component {
+export default class TabViewDetails extends Component {
+
+    componentWillMount() {
+       // this.setState({movieList:this.props.moviesData});
+      // alert("tab view details *** : "+this.props.data.id);
+
+     }
+ 
 
     state = {
         index: 0,

@@ -9,6 +9,7 @@ import {
   } from 'react-native';
   import { connect } from 'react-redux'
   import { bindActionCreators } from 'redux';
+  import {Actions} from 'react-native-router-flux';
 
   //import fetchCastListData from '../actions/CastListAction'
 
@@ -37,12 +38,12 @@ import {
 
    componentDidMount() {
     
-    return fetch('https://api.themoviedb.org/3/movie/2/similar?api_key=1b31282aebdebc34884006adfac40bfb&language=en-US&page=1')
+    return fetch('https://api.themoviedb.org/3/movie/284053/credits?api_key=1b31282aebdebc34884006adfac40bfb')
       .then((response) => response.json())
       .then((responseJson) => {
         this.setState({
           isLoading: false,
-          castList: responseJson.results
+          castList: responseJson.cast
           
 
         }, function() {
@@ -63,30 +64,31 @@ import {
                 <FlatList
                             data={ this.state.castList }
                             renderItem={({item}) => 
-
                             <View>
+                           
                             <View style = {{flex:1, flexDirection:'row', margin:10, paddingLeft:10,
                                 justifyContent:'center'}}>
                                     <View style={{flex: 0.3}}>
-                                        <Image source={{uri: "http://image.tmdb.org/t/p/w185"+item.backdrop_path}}
+                                    <TouchableOpacity  onPress={() => Actions.TabViewPeople()}>
+                                        <Image source={{uri: "http://image.tmdb.org/t/p/w185"+item.profile_path}}
                                          style={{width:70, height:70, borderRadius:35}}/>
+                                    </TouchableOpacity>
                                     </View>
                                     
                                     <View style = {{flex:0.4, justifyContent:'center',}}>
-                                        <Text style={{fontSize:15}}>{item.title}</Text>
+                                        <Text style={{fontSize:15}} >{item.name}</Text>
                                     </View>
                             
                                     <View style = {{flex:0.3, justifyContent:'center', alignItems:'flex-end',margin:5}}>
-                                        <Text style={{fontSize:15}}>{item.original_language}</Text>
+                                        <Text style={{fontSize:15}}>{item.character}</Text>
                                     </View>
 
                             </View>
                             
                             <View style={{flex:1,height:1, backgroundColor:'#dddcdc'}}></View>
                         
-                        </View>
-
                        
+                       </View>
                             }
                         />
             </View>

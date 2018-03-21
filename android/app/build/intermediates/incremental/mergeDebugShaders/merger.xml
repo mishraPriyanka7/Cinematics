@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="/Users/sdnmacmini36/Desktop/Roshan/Cinematics/android/app/src/main/shaders"/></dataSet><dataSet config="debug"><source path="/Users/sdnmacmini36/Desktop/Roshan/Cinematics/android/app/src/debug/shaders"/></dataSet></merger>
+<merger version="3"><dataSet config="main"><source path="/home/priyankatiwari/Priyanka_tiwari/ReactNative/Assignment2/priyanka/Cinematics/android/app/src/main/shaders"/></dataSet><dataSet config="debug"><source path="/home/priyankatiwari/Priyanka_tiwari/ReactNative/Assignment2/priyanka/Cinematics/android/app/src/debug/shaders"/></dataSet></merger>

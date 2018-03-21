@@ -7,14 +7,17 @@ import NavDrawer from "../src/component/NavDrawer";
 import MovieDashboard from "../src/component/MovieDashboard";
 import TabViewExample from "../src/component/TabViewExample";
 import Splash from "../src/component/Splash";
+import TabViewPeople from '../src/component/TabViewPeople';
+import TabViewDetails from '../src/component/TabViewDetails';
 
 export default class RouterComponent extends Component {
   render() {
     return (
       <Router>
         <Scene key="list" hideNavBar={false}>
-          <Scene key="splash" component={Splash} hideNavBar={true} initial />
 
+          <Scene key="splash" component={Splash} hideNavBar={true} initial/>
+         
           <Scene
             key="TabBar"
             component={TabBarComponent}
@@ -42,6 +45,19 @@ export default class RouterComponent extends Component {
             title="Search TV Shows"
             leftButtonIconStyle={{ tintColor: "white" }}
           />
+          
+          <Scene 
+            key="TabViewPeople"
+            component={TabViewPeople}
+            title="People Details"
+          />
+
+           <Scene 
+            key="TabViewDetails"
+            component={TabViewDetails}
+            title="Tab View Details"
+          />
+        
         </Scene>
       </Router>
     );

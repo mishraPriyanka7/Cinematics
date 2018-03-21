@@ -3,201 +3,201 @@
 
     <item
         is-multidex="false"
-        jar="/Users/sdnmacmini36/Desktop/Roshan/Cinematics/android/app/build/intermediates/exploded-aar/com.facebook.soloader/soloader/0.1.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="8f615bca00639150c9eb6175d4b5471193f70794">
-        <dex dex="/Users/sdnmacmini36/Desktop/Roshan/Cinematics/android/app/build/intermediates/pre-dexed/debug/com.facebook.soloader-soloader-0.1.0_897ccbc86505194119d215e1cb265bf077fd6141.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/sdnmacmini36/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.0.1/support-annotations-23.0.1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
-        <dex dex="/Users/sdnmacmini36/Desktop/Roshan/Cinematics/android/app/build/intermediates/pre-dexed/debug/support-annotations-23.0.1_5dd3f7180cdcb5dd8922eb1da07759fd7eea03b7.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/sdnmacmini36/Desktop/Roshan/Cinematics/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/libs/internal_impl-23.0.1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
-        <dex dex="/Users/sdnmacmini36/Desktop/Roshan/Cinematics/android/app/build/intermediates/pre-dexed/debug/internal_impl-23.0.1_ae4ce83c18bea264592d9c92d6f12c20d8835966.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/sdnmacmini36/.gradle/caches/modules-2/files-2.1/javax.inject/javax.inject/1/6975da39a7040257bd51d21a231b76c915872d38/javax.inject-1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="6975da39a7040257bd51d21a231b76c915872d38">
-        <dex dex="/Users/sdnmacmini36/Desktop/Roshan/Cinematics/android/app/build/intermediates/pre-dexed/debug/javax.inject-1_cae8c03232f4917d2c69ca1df1feb1e753dbf939.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/sdnmacmini36/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/3.0.0/5871fb60dc68d67da54a663c3fd636a10a532948/jsr305-3.0.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="5871fb60dc68d67da54a663c3fd636a10a532948">
-        <dex dex="/Users/sdnmacmini36/Desktop/Roshan/Cinematics/android/app/build/intermediates/pre-dexed/debug/jsr305-3.0.0_ebaffd27d5769d49aa40741ea26e38143336c431.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/sdnmacmini36/Desktop/Roshan/Cinematics/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fresco/1.3.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="fe85b87215e405f5917d40ae4960488ac9224b74">
-        <dex dex="/Users/sdnmacmini36/Desktop/Roshan/Cinematics/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-fresco-1.3.0_f35a50d0099a8b9df4be8984926deeb30374a96b.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/sdnmacmini36/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp-urlconnection/3.6.0/3f9b16b774f2c36cfd86dd2053d0b3059531dacc/okhttp-urlconnection-3.6.0.jar"
+        jar="/home/priyankatiwari/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp-urlconnection/3.6.0/3f9b16b774f2c36cfd86dd2053d0b3059531dacc/okhttp-urlconnection-3.6.0.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
         sha1="3f9b16b774f2c36cfd86dd2053d0b3059531dacc">
-        <dex dex="/Users/sdnmacmini36/Desktop/Roshan/Cinematics/android/app/build/intermediates/pre-dexed/debug/okhttp-urlconnection-3.6.0_555bac5e88fe3aefc3e9f2bf663713dc9190f181.jar" />
+        <dex dex="/home/priyankatiwari/Priyanka_tiwari/ReactNative/Assignment2/priyanka/Cinematics/android/app/build/intermediates/pre-dexed/debug/okhttp-urlconnection-3.6.0_b0f4089fe98c31e355a80f7b518f0d43f3b28273.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/Users/sdnmacmini36/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.13.0/a9283170b7305c8d92d25aff02a6ab7e45d06cbe/okio-1.13.0.jar"
+        jar="/home/priyankatiwari/Priyanka_tiwari/ReactNative/Assignment2/priyanka/Cinematics/android/app/build/intermediates/exploded-aar/com.facebook.soloader/soloader/0.1.0/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
-        sha1="a9283170b7305c8d92d25aff02a6ab7e45d06cbe">
-        <dex dex="/Users/sdnmacmini36/Desktop/Roshan/Cinematics/android/app/build/intermediates/pre-dexed/debug/okio-1.13.0_aa58e7cd049f8cc1c8456b0d22e3b9cc179ca6cc.jar" />
+        sha1="8f615bca00639150c9eb6175d4b5471193f70794">
+        <dex dex="/home/priyankatiwari/Priyanka_tiwari/ReactNative/Assignment2/priyanka/Cinematics/android/app/build/intermediates/pre-dexed/debug/com.facebook.soloader-soloader-0.1.0_5ee3476880247c66178dd23d66954df6ae95d90f.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/Users/sdnmacmini36/Desktop/Roshan/Cinematics/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.50.0/jars/classes.jar"
+        jar="/home/priyankatiwari/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/3.0.0/5871fb60dc68d67da54a663c3fd636a10a532948/jsr305-3.0.0.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
-        sha1="0b693f1512262d8e4923e7f1cb2040b0897f9581">
-        <dex dex="/Users/sdnmacmini36/Desktop/Roshan/Cinematics/android/app/build/intermediates/pre-dexed/debug/com.facebook.react-react-native-0.50.0_f6c96aceeb895e4ebefba04b73e370adb425e936.jar" />
+        sha1="5871fb60dc68d67da54a663c3fd636a10a532948">
+        <dex dex="/home/priyankatiwari/Priyanka_tiwari/ReactNative/Assignment2/priyanka/Cinematics/android/app/build/intermediates/pre-dexed/debug/jsr305-3.0.0_b86873f7648fa2385ad4a299c10eea5659749f3c.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/Users/sdnmacmini36/Desktop/Roshan/Cinematics/android/app/build/intermediates/exploded-aar/com.facebook.fresco/drawee/1.3.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="c65a2e39d54023bac3aef64a2f0cff89289c7ff6">
-        <dex dex="/Users/sdnmacmini36/Desktop/Roshan/Cinematics/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-drawee-1.3.0_2a7b95f374910412b7d1a0d1549751c6e5980bc4.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/sdnmacmini36/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.6.0/69edde9fc4b01c9fd51d25b83428837478c27254/okhttp-3.6.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="69edde9fc4b01c9fd51d25b83428837478c27254">
-        <dex dex="/Users/sdnmacmini36/Desktop/Roshan/Cinematics/android/app/build/intermediates/pre-dexed/debug/okhttp-3.6.0_f780f58b3da0dd462ea1bb03bbadc1c173f93bc6.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/sdnmacmini36/Desktop/Roshan/Cinematics/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
-        <dex dex="/Users/sdnmacmini36/Desktop/Roshan/Cinematics/android/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-23.0.1_a818d85ba4d2ed5ab0fd5c97e4511230e18322c4.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/sdnmacmini36/Desktop/Roshan/Cinematics/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fbcore/1.3.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="37345de2ed2772f385eaeec37a9c2ff0fea99ad7">
-        <dex dex="/Users/sdnmacmini36/Desktop/Roshan/Cinematics/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-fbcore-1.3.0_5687de64e8a4f0b1c2eef603e7409045b8bf92a5.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/sdnmacmini36/Desktop/Roshan/Cinematics/android/app/build/intermediates/exploded-aar/com.facebook.fbui.textlayoutbuilder/textlayoutbuilder/1.0.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="f90b593491e4044903f0bbf68dc3fa2790b151b9">
-        <dex dex="/Users/sdnmacmini36/Desktop/Roshan/Cinematics/android/app/build/intermediates/pre-dexed/debug/com.facebook.fbui.textlayoutbuilder-textlayoutbuilder-1.0.0_066a660d9cfa53a6ab9ce81d652aac14c67ccfd8.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/sdnmacmini36/Desktop/Roshan/Cinematics/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-okhttp3/1.3.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="c03c08c9934b23c8c09c803345ec51a74119127b">
-        <dex dex="/Users/sdnmacmini36/Desktop/Roshan/Cinematics/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-okhttp3-1.3.0_8dfea8a2029d192a04fddef50bd3fd9cf91ddbba.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/sdnmacmini36/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-tasks/1.4.0/d85884acf6810a3bbbecb587f239005cbc846dc4/bolts-tasks-1.4.0.jar"
+        jar="/home/priyankatiwari/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-tasks/1.4.0/d85884acf6810a3bbbecb587f239005cbc846dc4/bolts-tasks-1.4.0.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
         sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
-        <dex dex="/Users/sdnmacmini36/Desktop/Roshan/Cinematics/android/app/build/intermediates/pre-dexed/debug/bolts-tasks-1.4.0_c8ef2c0b8c2c50a0f36daef6c276c7e218dea87c.jar" />
+        <dex dex="/home/priyankatiwari/Priyanka_tiwari/ReactNative/Assignment2/priyanka/Cinematics/android/app/build/intermediates/pre-dexed/debug/bolts-tasks-1.4.0_141c6de8bcf970f414f6d188f348ce38101a0c78.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/Users/sdnmacmini36/Desktop/Roshan/Cinematics/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-base/1.3.0/jars/classes.jar"
+        jar="/home/priyankatiwari/Priyanka_tiwari/ReactNative/Assignment2/priyanka/Cinematics/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
+        <dex dex="/home/priyankatiwari/Priyanka_tiwari/ReactNative/Assignment2/priyanka/Cinematics/android/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-23.0.1_7ee47e6a140f75b684f54dcfc7c6670cfe2cb8ef.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/priyankatiwari/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.13.0/a9283170b7305c8d92d25aff02a6ab7e45d06cbe/okio-1.13.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="a9283170b7305c8d92d25aff02a6ab7e45d06cbe">
+        <dex dex="/home/priyankatiwari/Priyanka_tiwari/ReactNative/Assignment2/priyanka/Cinematics/android/app/build/intermediates/pre-dexed/debug/okio-1.13.0_8b4ec0341e119e8bec7ab700e820c85a0b5c70d6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/priyankatiwari/Priyanka_tiwari/ReactNative/Assignment2/priyanka/Cinematics/android/app/build/intermediates/exploded-aar/com.facebook.fbui.textlayoutbuilder/textlayoutbuilder/1.0.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="f90b593491e4044903f0bbf68dc3fa2790b151b9">
+        <dex dex="/home/priyankatiwari/Priyanka_tiwari/ReactNative/Assignment2/priyanka/Cinematics/android/app/build/intermediates/pre-dexed/debug/com.facebook.fbui.textlayoutbuilder-textlayoutbuilder-1.0.0_160b85a82f7bb7882f7d5ca059c38154a74aa096.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/priyankatiwari/Priyanka_tiwari/ReactNative/Assignment2/priyanka/Cinematics/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/libs/internal_impl-23.0.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
+        <dex dex="/home/priyankatiwari/Priyanka_tiwari/ReactNative/Assignment2/priyanka/Cinematics/android/app/build/intermediates/pre-dexed/debug/internal_impl-23.0.1_30b08c7f729f07bd67fe3aef42c488007f07d237.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/priyankatiwari/Priyanka_tiwari/ReactNative/Assignment2/priyanka/Cinematics/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fbcore/1.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="37345de2ed2772f385eaeec37a9c2ff0fea99ad7">
+        <dex dex="/home/priyankatiwari/Priyanka_tiwari/ReactNative/Assignment2/priyanka/Cinematics/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-fbcore-1.3.0_39643fc04bd8fbc85d87f86ab0175724c79a9241.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/priyankatiwari/Priyanka_tiwari/ReactNative/Assignment2/priyanka/Cinematics/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-base/1.3.0/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
         sha1="72128af126ddd7d6252da9357fe560d3abcdfb0c">
-        <dex dex="/Users/sdnmacmini36/Desktop/Roshan/Cinematics/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-base-1.3.0_29d623bef846c014a39f11879603e7ada5282937.jar" />
+        <dex dex="/home/priyankatiwari/Priyanka_tiwari/ReactNative/Assignment2/priyanka/Cinematics/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-base-1.3.0_dd1c3e27b0b3ee1bebb1f3f68415106920460bae.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/Users/sdnmacmini36/Desktop/Roshan/Cinematics/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/classes.jar"
+        jar="/home/priyankatiwari/Priyanka_tiwari/ReactNative/Assignment2/priyanka/Cinematics/android/app/build/intermediates/exploded-aar/Cinematics/react-native-gesture-handler/unspecified/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="94da5c7028518f02a02b6ab3eaa1c0b483f92045">
+        <dex dex="/home/priyankatiwari/Priyanka_tiwari/ReactNative/Assignment2/priyanka/Cinematics/android/app/build/intermediates/pre-dexed/debug/Cinematics-react-native-gesture-handler-unspecified_38f927e58c5fa8f182ea543403fc5f8cc35e1647.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/priyankatiwari/Priyanka_tiwari/ReactNative/Assignment2/priyanka/Cinematics/android/app/build/intermediates/exploded-aar/com.facebook.fresco/drawee/1.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="c65a2e39d54023bac3aef64a2f0cff89289c7ff6">
+        <dex dex="/home/priyankatiwari/Priyanka_tiwari/ReactNative/Assignment2/priyanka/Cinematics/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-drawee-1.3.0_64784b7c3566199280d5e543f6e4734f9f5e71b3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/priyankatiwari/Priyanka_tiwari/ReactNative/Assignment2/priyanka/Cinematics/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fresco/1.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="fe85b87215e405f5917d40ae4960488ac9224b74">
+        <dex dex="/home/priyankatiwari/Priyanka_tiwari/ReactNative/Assignment2/priyanka/Cinematics/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-fresco-1.3.0_a12afc3c07aac2e7d5bbce9436164ce9c51721e0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/priyankatiwari/Priyanka_tiwari/ReactNative/Assignment2/priyanka/Cinematics/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
         sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
-        <dex dex="/Users/sdnmacmini36/Desktop/Roshan/Cinematics/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-23.0.1_1d7f1d93779481ba61676cc5593836e310e78a0d.jar" />
+        <dex dex="/home/priyankatiwari/Priyanka_tiwari/ReactNative/Assignment2/priyanka/Cinematics/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-23.0.1_d72cc848237921db1515b03f974a2f17d4bbfaae.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/Users/sdnmacmini36/.gradle/caches/modules-2/files-2.1/com.facebook.fbui.textlayoutbuilder/staticlayout-proxy/1.0/f162442a19fff13995fbd51ba414d9ee05579080/staticlayout-proxy-1.0.jar"
+        jar="/home/priyankatiwari/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/23.0.1/support-annotations-23.0.1.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
-        sha1="f162442a19fff13995fbd51ba414d9ee05579080">
-        <dex dex="/Users/sdnmacmini36/Desktop/Roshan/Cinematics/android/app/build/intermediates/pre-dexed/debug/staticlayout-proxy-1.0_71296b08ebe57383efa49ba88679504ee360815c.jar" />
+        sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
+        <dex dex="/home/priyankatiwari/Priyanka_tiwari/ReactNative/Assignment2/priyanka/Cinematics/android/app/build/intermediates/pre-dexed/debug/support-annotations-23.0.1_4e0a57278d0df9e5b52395635056434c2add6ab2.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/Users/sdnmacmini36/Desktop/Roshan/Cinematics/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline/1.3.0/jars/classes.jar"
+        jar="/home/priyankatiwari/.gradle/caches/modules-2/files-2.1/javax.inject/javax.inject/1/6975da39a7040257bd51d21a231b76c915872d38/javax.inject-1.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
-        sha1="48c7f54c2515a2312d3a4481d10c43fbb807f3af">
-        <dex dex="/Users/sdnmacmini36/Desktop/Roshan/Cinematics/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-1.3.0_3f767d103b54675a04eaedb5abf05caddf349d07.jar" />
+        sha1="6975da39a7040257bd51d21a231b76c915872d38">
+        <dex dex="/home/priyankatiwari/Priyanka_tiwari/ReactNative/Assignment2/priyanka/Cinematics/android/app/build/intermediates/pre-dexed/debug/javax.inject-1_7fd6e45457b99e58a3f95dd2ca7a546d2cf88e2d.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/Users/sdnmacmini36/Desktop/Roshan/Cinematics/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.50.0/jars/libs/infer-annotations-4.0.jar"
+        jar="/home/priyankatiwari/Priyanka_tiwari/ReactNative/Assignment2/priyanka/Cinematics/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.50.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="0b693f1512262d8e4923e7f1cb2040b0897f9581">
+        <dex dex="/home/priyankatiwari/Priyanka_tiwari/ReactNative/Assignment2/priyanka/Cinematics/android/app/build/intermediates/pre-dexed/debug/com.facebook.react-react-native-0.50.0_77721a35819edd1534dfad6c7369503a2b24000f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/priyankatiwari/Priyanka_tiwari/ReactNative/Assignment2/priyanka/Cinematics/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-okhttp3/1.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="c03c08c9934b23c8c09c803345ec51a74119127b">
+        <dex dex="/home/priyankatiwari/Priyanka_tiwari/ReactNative/Assignment2/priyanka/Cinematics/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-okhttp3-1.3.0_da51ca4b9c1948740639f6bf35d56b4ed2e653e4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/priyankatiwari/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.6.0/69edde9fc4b01c9fd51d25b83428837478c27254/okhttp-3.6.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="69edde9fc4b01c9fd51d25b83428837478c27254">
+        <dex dex="/home/priyankatiwari/Priyanka_tiwari/ReactNative/Assignment2/priyanka/Cinematics/android/app/build/intermediates/pre-dexed/debug/okhttp-3.6.0_51eadadb2177472615fa681dfe180d3fcd7d90f6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/priyankatiwari/Priyanka_tiwari/ReactNative/Assignment2/priyanka/Cinematics/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.50.0/jars/libs/infer-annotations-4.0.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
         sha1="9809e90be788acdb479b2b44e2112f3295a03068">
-        <dex dex="/Users/sdnmacmini36/Desktop/Roshan/Cinematics/android/app/build/intermediates/pre-dexed/debug/infer-annotations-4.0_7fd463cc6a848c93ce7dc3fceeb011a2ebc3c675.jar" />
+        <dex dex="/home/priyankatiwari/Priyanka_tiwari/ReactNative/Assignment2/priyanka/Cinematics/android/app/build/intermediates/pre-dexed/debug/infer-annotations-4.0_4e7956478a85806ec29c48731dd9a24736c427d0.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/Users/sdnmacmini36/Desktop/Roshan/Cinematics/android/app/build/intermediates/exploded-aar/Cinematics/react-native-gesture-handler/unspecified/jars/classes.jar"
+        jar="/home/priyankatiwari/.gradle/caches/modules-2/files-2.1/com.facebook.fbui.textlayoutbuilder/staticlayout-proxy/1.0/f162442a19fff13995fbd51ba414d9ee05579080/staticlayout-proxy-1.0.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
-        sha1="dc7808172ae45c1124b0d2b724a927cec8dc19c1">
-        <dex dex="/Users/sdnmacmini36/Desktop/Roshan/Cinematics/android/app/build/intermediates/pre-dexed/debug/Cinematics-react-native-gesture-handler-unspecified_68863097da91e9852cff27446585ccc40fd5c9f0.jar" />
+        sha1="f162442a19fff13995fbd51ba414d9ee05579080">
+        <dex dex="/home/priyankatiwari/Priyanka_tiwari/ReactNative/Assignment2/priyanka/Cinematics/android/app/build/intermediates/pre-dexed/debug/staticlayout-proxy-1.0_88d94ff24c33f873b5f507df387a7b68162db366.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/priyankatiwari/Priyanka_tiwari/ReactNative/Assignment2/priyanka/Cinematics/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline/1.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="48c7f54c2515a2312d3a4481d10c43fbb807f3af">
+        <dex dex="/home/priyankatiwari/Priyanka_tiwari/ReactNative/Assignment2/priyanka/Cinematics/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-1.3.0_7d64eb3bbb34f3503ef665fd9bbc845d1c764515.jar" />
     </item>
 
 </items>
