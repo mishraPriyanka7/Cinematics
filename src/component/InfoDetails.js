@@ -9,6 +9,7 @@ import {
     Image,
     WebView,
     ScrollView,
+    Linking,
     ActivityIndicator
   } from 'react-native';
   import { connect } from 'react-redux'
@@ -20,8 +21,10 @@ import {
   import { fetchMovieDetails } from '../actions/SimilarMoviesAction';
   import fetchVideoData from '../actions/VideoListAction';
 
-
+  var url = "https://www.youtube.com/embed/";
+  
   class InfoDetails extends Component {
+      
 
     constructor(props){
         super(props);
@@ -70,19 +73,35 @@ import {
 
         }
 
-    componentDidMount() {
+        // componentDidMount() {
+        //     Linking.addEventListener('url', this._handleOpenURL);
+           
+        //     Linking.canOpenURL(url).then(supported => {
+        //         if (!supported) {
+        //           console.log('Can\'t handle url: ' + url);
+        //           alert('Can\'t handle url: ' + url);
+        //         } else {
+        //           return Linking.openURL(url);
+        //         }
+        //       }).catch(err => console.error('An error occurred', err));
+        //   }
+        //   componentWillUnmount() {
+        //     Linking.removeEventListener('url', this._handleOpenURL);
+        //   }
+        //   _handleOpenURL(event) {
+        //     console.log(event.url);
+        //   }
 
-        // Linking.canOpenURL("https://www.youtube.com/embed/ue80QwXMRHg").then(supported => {
-        //     if (!supported) {
-        //       console.log('Can\'t handle url: ' + url);
-        //     } else {
-        //       return Linking.openURL("https://www.youtube.com/embed/ue80QwXMRHg");
-        //     }
-        //   }).catch(err => console.error('An error occurred', err));  
-    }
-     
-  
-
+        onPress(urls){
+          Linking.canOpenURL('whatsapp://app').then(supported => {
+            if (!supported) {
+              console.log('Can\'t handle url: ' + urls);
+            } else {
+              return Linking.openURL(urls);
+            }
+          }).catch(err => console.error('An error occurred', err));
+     }
+    
     render(){
 
         if (this.state.isLoading) {
@@ -92,6 +111,8 @@ import {
               </View>
             );
           }
+
+
 
          
         return(
@@ -129,7 +150,7 @@ import {
 
                     <View style={{height:1, backgroundColor:'#dddcdc', margin:10}}></View>
                 </View>
-
+                
                 <View style={{flex:0.4, margin:10, marginTop:10}}>
                 
                     <View style={{marginLeft:10}}>
@@ -168,12 +189,14 @@ import {
                      marginRight:10}}></View>
                     
                 </View>
-     
+                
                   {/* video start  */}
 
                 <View style={{flex:0.3, marginTop:5,margin:10,}}>
+               
 
                 <Text style={{fontSize:18, marginLeft:10}}>Trailers</Text>
+                
 
                 <View style={{flex:0.3, marginTop:10}}>
                         
@@ -181,21 +204,23 @@ import {
                             data={ this.state.videoList }
                             horizontal={true}
                             renderItem={({item}) => 
+                           
                             <View style = {{flex:1, flexDirection:'column',margin:10,
                                     justifyContent:'center'}}>
-
+                                    <TouchableOpacity  onPress={() => this.onPress(url+item.key)}>
                                         <WebView
                                             style={ {height:120,width:180}}
                                             javaScriptEnabled={true}
                                             domStorageEnabled={true}
-                                            source={{uri: 'https://www.youtube.com/embed/'+item.key+''}}
+                                            source={{uri: url+item.key}}
                                         />
                                     
                                         <Text style={{marginTop:10, 
                                             alignItems:'center',
                                             justifyContent:'center'}}> {item.name} </Text>
+                                            </TouchableOpacity>
+                                            
                             </View>
-                            
                             }
                     />
                     </View>

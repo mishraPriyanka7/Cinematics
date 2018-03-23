@@ -43,15 +43,17 @@ import {
                 <FlatList
                             data={ this.state.castList }
                             renderItem={({item}) => 
+                            
+                            <TouchableOpacity  onPress={() => Actions.TabViewPeople({castId:item.id})}>
                             <View>
                            
                             <View style = {{flex:1, flexDirection:'row', margin:10, paddingLeft:10,
                                 justifyContent:'center'}}>
                                     <View style={{flex: 0.3}}>
-                                    <TouchableOpacity  onPress={() => Actions.TabViewPeople({castId:item.id})}>
+                                   
                                         <Image source={{uri: "http://image.tmdb.org/t/p/w185"+item.profile_path}}
                                          style={{width:70, height:70, borderRadius:35}}/>
-                                    </TouchableOpacity>
+                                   
                                     </View>
                                     
                                     <View style = {{flex:0.4, justifyContent:'center',}}>
@@ -68,6 +70,7 @@ import {
                         
                        
                        </View>
+                       </TouchableOpacity>
                             }
                         />
             </View>
