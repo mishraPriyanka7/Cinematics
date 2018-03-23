@@ -50,7 +50,7 @@ import {
      }
  
      componentWillReceiveProps(nextProps) {
-         //alert("Priyanka *** "+ JSON.stringify(nextProps.MovieData.movieData));
+        // alert("Priyanka *** "+ JSON.stringify(nextProps.MovieListData));
          if (nextProps.MovieListData != '' && nextProps.MovieListData != undefined) {
             this.setState({ similarMoviesList: nextProps.MovieListData.SimilarMoviesListData.results})
          }
@@ -162,17 +162,20 @@ import {
                             <Text style={Styles.textDetailsStyle}>{this.state.Rvenue}</Text>
                         </View>
 
-                         <View style={{height:1, backgroundColor:'#dddcdc', margin:5}}></View>
-
                     </View>
 
-                    <Text style={{fontSize:18, margin:5}}>Trailers</Text>
+                     <View style={{height:1, backgroundColor:'#dddcdc', marginTop:10,marginLeft:10,
+                     marginRight:10}}></View>
                     
                 </View>
      
                   {/* video start  */}
 
-                <View style={{flex:0.3, marginTop:10,margin:10, flexDirection:'row'}}>
+                <View style={{flex:0.3, marginTop:5,margin:10,}}>
+
+                <Text style={{fontSize:18, marginLeft:10}}>Trailers</Text>
+
+                <View style={{flex:0.3, marginTop:10}}>
                         
                     <FlatList
                             data={ this.state.videoList }
@@ -181,8 +184,6 @@ import {
                             <View style = {{flex:1, flexDirection:'column',margin:10,
                                     justifyContent:'center'}}>
 
-                                    
-                                    
                                         <WebView
                                             style={ {height:120,width:180}}
                                             javaScriptEnabled={true}
@@ -197,10 +198,13 @@ import {
                             
                             }
                     />
+                    </View>
 
                 </View>
 
                 {/* ** video end *** */}
+
+                {/* Flat List More Movies */}
 
                 <View style={{flex:0.4,margin:15,}}>
                     
@@ -218,13 +222,47 @@ import {
                     </View>   
 
                     <View> 
-                        <SimilarMovies moviesData={this.state.similarMoviesList} />
+                    <View style={{marginTop:5}}>
+                        
+                        <FlatList
+                                data={ this.state.similarMoviesList }
+                                horizontal={true}
+                                renderItem={({item}) => 
+                                <View>
+                                <View style = {{flex:1, flexDirection:'column', margin:2,
+                                        justifyContent:'center'}}>
+                                        <View style={{justifyContent:'center'}}>
+                                        <TouchableOpacity activeOpacity = { .5 }>
+                                                <Image 
+                                                    source={{uri: "http://image.tmdb.org/t/p/w185"+item.backdrop_path}}
+                                                    style={{width:130, height:130, margin:2}}>
+                                                </Image>
+
+                                        </TouchableOpacity>
+                                        </View>
+                                            
+                                        <View style = {{justifyContent:'center',alignItems:'center', marginTop:10}}>
+                                                <Text style={{fontSize:15}}>{item.title}</Text>
+                                                <Text style={{fontSize:13}}>{item.popularity}</Text>
+                                        </View>
+                                    
+                                </View>
+                                </View>
+                                
+                                }
+                            />
+                        </View>
                     </View>
 
                     
                 </View>
 
-                <View style={{flex:0.4,margin:15,}}>
+                 {/* *** Flat List More Movies end **** */}
+
+                 
+                {/* *** Flat List Similar  Movies **** */}
+
+                <View style={{flex:0.5,margin:15,}}>
                     
                     <View style={{height:1, backgroundColor:'#dddcdc'}}></View>
 
@@ -240,10 +278,42 @@ import {
                     </View> 
                     
                     <View> 
-                        <SimilarMovies moviesData={this.state.similarMoviesList} />
-                </View>
+                        <View style={{marginTop:5, marginBottom:10}}>
+                        
+                        <FlatList
+                                data={ this.state.similarMoviesList }
+                                horizontal={true}
+                                renderItem={({item}) => 
+                                <View>
+                                <View style = {{flex:1, flexDirection:'column', margin:2,
+                                        justifyContent:'center'}}>
+                                        <View style={{justifyContent:'center'}}>
+                                        <TouchableOpacity activeOpacity = { .5 }>
+                                                <Image 
+                                                    source={{uri: "http://image.tmdb.org/t/p/w185"+item.backdrop_path}}
+                                                    style={{width:130, height:130, margin:2}}>
+                                                </Image>
 
-                </View>      
+                                        </TouchableOpacity>
+                                        </View>
+                                            
+                                        <View style = {{justifyContent:'center',alignItems:'center', marginTop:10}}>
+                                                <Text style={{fontSize:15}}>{item.title}</Text>
+                                                <Text style={{fontSize:13}}>{item.popularity}</Text>
+                                        </View>
+                                    
+                                </View>
+                                </View>
+                                
+                                }
+                            />
+                        </View>
+                    </View>
+
+                </View>     
+
+                 {/* *** Flat List Similar  Movies **** */}
+
             </ScrollView>
             </View>
         );
@@ -257,6 +327,7 @@ import {
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: '#F5FCFF',
+        
       },
     textStyle: {
         flexDirection:'row', 

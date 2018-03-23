@@ -20,8 +20,8 @@ export default class SimilarMovies extends Component {
     }
 
     componentWillMount() {
-       this.setState({movieList:this.props.moviesData});
-       //alert(JSON.stringify(movieList))
+       this.setState({movieList:this.props.similarMovieData});
+       alert("similar movies data : **  "+JSON.stringify(this.props.similarMovieData))
     }
 
     

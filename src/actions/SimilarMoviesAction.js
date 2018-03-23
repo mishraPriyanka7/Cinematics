@@ -1,15 +1,15 @@
-import { FETCHING_LIST, FETCHING_LIST_SUCCESS, FETCHING_LIST_FAILURE, 
+import { FETCHING_SIMILAR_MOVIE_LIST, FETCHING_SIMILAR_MOVIE_LIST_SUCCESS, FETCHING_SIMILAR_MOVIE_LIST_FAILURE, 
     FETCHING_MOVIE_DATA, FETCHING_MOVIE_DATA_SUCCESS, FETCHING_MOVIE_DATA_FAILURE} from '../utils/constants'
 
 export default function fetchMovieData(similarMovieId) {
 
     return (dispatch) => {
-        dispatch(getLisData())
+        dispatch(getSimilarMovieLisData())
         //alert("similar movie actions "+ similarMovieId);
         fetch("https://api.themoviedb.org/3/movie/"+similarMovieId+"/similar?api_key=1b31282aebdebc34884006adfac40bfb&language=en-US&page=1")
             .then(res => res.json())
-            .then(json => dispatch(getListDataSuccess(json)))
-            .catch(err => dispatch(getListDataFailure(err)))
+            .then(json => dispatch(getSimilarMovieListSuccess(json)))
+            .catch(err => dispatch(getSimilarMovieListFailure(err)))
 
     }
 }
@@ -26,25 +26,29 @@ export  function fetchMovieDetails(movieId) {
     }
 }
 
-function getLisData() {
+// **** similar movies list *****
+
+function getSimilarMovieLisData() {
     return {
-        type: FETCHING_LIST
+        type: FETCHING_SIMILAR_MOVIE_LIST
     }
 }
 
-function getListDataSuccess(data) {
+function getSimilarMovieListSuccess(data) {
     return {
-        type: FETCHING_LIST_SUCCESS,
+        type: FETCHING_SIMILAR_MOVIE_LIST_SUCCESS,
         data
     }
 }
 
-function getListDataFailure() {
+function getSimilarMovieListFailure() {
     return {
-        type: FETCHING_LIST_FAILURE,
+        type: FETCHING_SIMILAR_MOVIE_LIST_FAILURE,
 
     }
 }
+
+// **** movies Details ****
 
 function getMoviesData() {
     return {
