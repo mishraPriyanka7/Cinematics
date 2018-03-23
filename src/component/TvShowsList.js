@@ -31,29 +31,7 @@ import {
             this.setState({ tvShowsList: nextProps.PeopleTvShowData.PeopleTvShowData.cast })
          }   
     }
- 
-
-   componentDidMount() {
     
-    // return fetch('https://api.themoviedb.org/3/person/'+this.props.castIds+'/tv_credits?api_key=1b31282aebdebc34884006adfac40bfb&language=en-US')
-    //   .then((response) => response.json())
-    //   .then((responseJson) => {
-    //     this.setState({
-    //       isLoading: false,
-    //       tvShowsList: responseJson.cast
-          
-
-    //     }, function() {
-          
-    //     });
-    //    // alert(JSON.stringify(responseJson.results))
-    //   })
-    //   .catch((error) => {
-    //     console.error(error);
-    //   });
-
-  }
-
     render(){
         return(
             <View style={Styles.mainContainer}>
@@ -126,7 +104,7 @@ const Styles = StyleSheet.create({
   });
 
   function mapStateToProps(state) {
-    //alert("** People Details ** "+JSON.stringify(state.PeopleDetails))
+    //alert("** People Details ** "+JSON.stringify(state.PeopleTvShowData))
     return {
         PeopleTvShowData: state.PeopleTvShowData,
     }

@@ -33,7 +33,7 @@ export  function fetchPeopleData(peopleId) {
    
     return (dispatch) => {
         dispatch(getPeopleMoviesData())
-        fetch("https://api.themoviedb.org/3/person/"+peopleId+"?api_key=1b31282aebdebc34884006adfac40bfb&language=en-US")
+        fetch("https://api.themoviedb.org/3/person/"+peopleId+"/movie_credits?api_key=1b31282aebdebc34884006adfac40bfb&language=en-US")
             .then(res => res.json())
             .then(json => dispatch(getPeopleMoviesDataSuccess(json)))
             .catch(err => dispatch(getPeopleMoviesDataFailure(err)))
@@ -45,7 +45,7 @@ export  function fetchPeopleTvShowsData(peopleId) {
    
     return (dispatch) => {
         dispatch(getPeopleTvShowData())
-        fetch("https://api.themoviedb.org/3/person/"+peopleId+"?api_key=1b31282aebdebc34884006adfac40bfb&language=en-US")
+        fetch("https://api.themoviedb.org/3/person/"+peopleId+"/tv_credits?api_key=1b31282aebdebc34884006adfac40bfb&language=en-US")
             .then(res => res.json())
             .then(json => dispatch(getPeopleTvShowDataSuccess(json)))
             .catch(err => dispatch(getPeopleTvShowDataFailure(err)))

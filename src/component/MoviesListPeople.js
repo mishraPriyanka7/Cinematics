@@ -8,44 +8,36 @@ import {
     StyleSheet
   } from 'react-native';
 
+  import { connect } from 'react-redux'
+  import { bindActionCreators } from 'redux';
+  import {fetchPeopleMoviesData} from '../actions/PeopleDetailsAction';
 
-  export default class MoviesListPeople extends Component {
+   class MoviesListPeople extends Component {
 
     constructor(props){
         super(props);
 
         this.state={
-            tvShowsList: [],      
+            moviesList: [],      
         };
     }
  
-
-   componentDidMount() {
-    
-    return fetch('https://api.themoviedb.org/3/person/'+this.props.castIds+'/movie_credits?api_key=1b31282aebdebc34884006adfac40bfb&language=en-US')
-      .then((response) => response.json())
-      .then((responseJson) => {
-        this.setState({
-          isLoading: false,
-          tvShowsList: responseJson.cast
-          
-        }, function() {
-          
-        });
-       // alert(JSON.stringify(responseJson.results))
-      })
-      .catch((error) => {
-        console.error(error);
-      });
-
-  }
+    componentWillMount() {
+        this.props.fetchPeopleMoviesData(this.props.castIds)
+     }
+ 
+     componentWillReceiveProps(nextProps) {
+         if (nextProps.PeopleMovieData != '' && nextProps.PeopleMovieData != undefined) {
+            this.setState({ moviesList: nextProps.PeopleMovieData.PeopleMoviesData.cast })
+         }   
+    }
 
     render(){
         return(
             <View style={Styles.mainContainer}>
             
                 <FlatList
-                            data={ this.state.tvShowsList }
+                            data={ this.state.moviesList }
                             renderItem={({item}) => 
 
                             <View style={{flex:1}}>
@@ -110,3 +102,17 @@ const Styles = StyleSheet.create({
         
     },
   });
+
+  function mapStateToProps(state) {
+    //alert("** People Details ** "+JSON.stringify(state.PeopleTvShowData))
+    return {
+        PeopleMovieData: state.PeopleMoviesData,
+    }
+}
+
+function mapDispatchToProps(dispatch) {
+    return bindActionCreators({ fetchPeopleMoviesData }, dispatch);
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(MoviesListPeople);
+
