@@ -16,7 +16,9 @@ import {
 
   import ratingList from '../component/common/RateListJson';
   import SimilarMovies from '../component/common/SimilarMovies';
-  import fetchMoviesData from '../actions/SimilarMoviesAction'
+  import fetchMoviesData from '../actions/SimilarMoviesAction';
+  import { fetchMovieDetails } from '../actions/SimilarMoviesAction';
+  import fetchVideoData from '../actions/VideoListAction';
 
 
   class InfoDetails extends Component {
@@ -30,6 +32,7 @@ import {
             isLoading: true,
             dataSource:[],
             similarMoviesList: [],
+            videoList:[],
             ReleaseDate:'',
             DVDReleaseDate:'',
             DirectedBy:'',
@@ -40,40 +43,42 @@ import {
     }
 
     componentWillMount() {
-         this.props.fetchMoviesData()
+       // alert("info deatils==== "+this.props.movieIds);
+         this.props.fetchMoviesData(this.props.movieIds);
+         this.props.fetchVideoData(this.props.movieIds);
+         this.props.fetchMovieDetails(this.props.movieIds);
      }
  
      componentWillReceiveProps(nextProps) {
+         //alert("Priyanka *** "+ JSON.stringify(nextProps.MovieData.movieData));
          if (nextProps.MovieListData != '' && nextProps.MovieListData != undefined) {
-
-            this.setState({ similarMoviesList: nextProps.MovieListData.MovieListData.results}) // this will update state to re-render ui
-           // alert(JSON.stringify(nextProps.MovieListData.MovieListData.results));
-
+            this.setState({ similarMoviesList: nextProps.MovieListData.SimilarMoviesListData.results})
          }
-        
-    }
+         if (nextProps.MovieData != '' && nextProps.MovieData != undefined) {
+          
+            this.setState({ isLoading: false,
+                            overView: nextProps.MovieData.movieData.overview,
+                            ReleaseDate: nextProps.MovieData.movieData.release_date,
+                            Budget: nextProps.MovieData.movieData.budget,
+                            Rvenue: nextProps.MovieData.movieData.revenue
+                        });
+         }
+
+         if (nextProps.videoListData != '' && nextProps.videoListData != undefined) {
+            this.setState({ videoList: nextProps.videoListData.VideoListData.results}) 
+         }   
+
+        }
 
     componentDidMount() {
 
-        return fetch('https://api.themoviedb.org/3/movie/284053?api_key=1b31282aebdebc34884006adfac40bfb&language=en-US')
-        .then((response) => response.json())
-        .then((responseJson) => {
-          this.setState({
-            isLoading: false,
-            overView: responseJson.overview,
-            ReleaseDate: responseJson.release_date,
-            Budget: responseJson.budget,
-            Rvenue: responseJson.revenue
-         
-          }, function() {
-            // In this block you can do something with new state.
-          });
-         // alert(JSON.stringify(responseJson.overview))
-        })
-        .catch((error) => {
-          console.error(error);
-        });
-          
+        // Linking.canOpenURL("https://www.youtube.com/embed/ue80QwXMRHg").then(supported => {
+        //     if (!supported) {
+        //       console.log('Can\'t handle url: ' + url);
+        //     } else {
+        //       return Linking.openURL("https://www.youtube.com/embed/ue80QwXMRHg");
+        //     }
+        //   }).catch(err => console.error('An error occurred', err));  
     }
      
   
@@ -164,29 +169,38 @@ import {
                     <Text style={{fontSize:18, margin:5}}>Trailers</Text>
                     
                 </View>
+     
+                  {/* video start  */}
 
-              
                 <View style={{flex:0.3, marginTop:10,margin:10, flexDirection:'row'}}>
+                        
+                    <FlatList
+                            data={ this.state.videoList }
+                            horizontal={true}
+                            renderItem={({item}) => 
+                            <View style = {{flex:1, flexDirection:'column',margin:10,
+                                    justifyContent:'center'}}>
 
-                    <View style={{marginRight:10}}>
-                        <WebView
-                                style={{height:130,width:150}}
-                                javaScriptEnabled={true}
-                                source={{uri: 'https://www.youtube.com/embed/ZZ5LpwO-An4?rel=0&autoplay=0&showinfo=0&controls=0'}}
-                        />
-                        <Text style={{marginTop:5}}> Official Trailer #1</Text>
-                    </View>
-
-                    <View style={{marginLeft:10}}>
-                        <WebView
-                            style={{height:130,width:150}}
-                            javaScriptEnabled={true}
-                            source={{uri: 'https://www.youtube.com/embed/ZZ5LpwO-An4?rel=0&autoplay=0&showinfo=0&controls=0'}}
-                        />
-                        <Text style={{marginTop:5}}> Red Band Trailer</Text>
-                    </View> 
+                                    
+                                    
+                                        <WebView
+                                            style={ {height:120,width:180}}
+                                            javaScriptEnabled={true}
+                                            domStorageEnabled={true}
+                                            source={{uri: 'https://www.youtube.com/embed/'+item.key+''}}
+                                        />
+                                    
+                                        <Text style={{marginTop:10, 
+                                            alignItems:'center',
+                                            justifyContent:'center'}}> {item.name} </Text>
+                            </View>
+                            
+                            }
+                    />
 
                 </View>
+
+                {/* ** video end *** */}
 
                 <View style={{flex:0.4,margin:15,}}>
                     
@@ -260,13 +274,18 @@ import {
 
 
 function mapStateToProps(state) {
+ //alert("***###**** "+JSON.stringify(state.SimilarMovieListData))
     return {
-        MovieListData: state.MovieListData
+        MovieListData: state.SimilarMovieListData,
+        videoListData: state.VideoListData,
+        MovieData: state.MoviesData,
+
     }
+
 }
 
 function mapDispatchToProps(dispatch) {
-    return bindActionCreators({ fetchMoviesData }, dispatch);
+    return bindActionCreators({ fetchMoviesData, fetchVideoData, fetchMovieDetails }, dispatch);
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(InfoDetails);

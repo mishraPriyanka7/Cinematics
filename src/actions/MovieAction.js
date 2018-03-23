@@ -19,27 +19,11 @@ export function fetchMovieDetails(movieID) {
         dispatch(getMovieData())
         fetch("https://api.themoviedb.org/3/movie/"+movieID+"?api_key=1b31282aebdebc34884006adfac40bfb&language=en-US")
             .then(response => response.json())
-            .then(responseJson => {
-                dispatch(getMovieDataSuccess(responseJson))
-            })
+            .then(responseJson => { dispatch(getMovieDataSuccess(responseJson)) })
             .catch(err => dispatch(getMovieDataFailure(err)))
 //dispatch(getMovieDataSuccess(json.data._55))
     }
 }
-
-// export function fetchMovieDetails(movieID){
-//     return fetch('https://api.themoviedb.org/3/movie/"+movieID+"?api_key=1b31282aebdebc34884006adfac40bfb&language=en-US')
-//       .then((response) => response.json())
-//       .then((responseJson) => {
-//         return dispatch(getMovieDataSuccess(responseJson));
-//       })
-//       .catch((error) => {
-//         console.error(error);
-//         return dispatch(getMovieDataFailure(err));
-//       });
-//   }
-
-
 
 function getLisData() {
     return {

@@ -15,16 +15,16 @@ export default class TabBarComponent extends Component {
         index: 0,
         routes: [
             { key: 'now_playing', title: 'NOW PLAYING' },
-            { key: 'top_box_office', title: 'TOP BOX OFFICE' },
-            { key: 'anticipated', title: 'ANTICIPATED' },
-            { key: 'upcoming', title: 'UPCOMING' },
-            { key: 'trending', title: 'TRENDING' },
-            { key: 'top_rated', title: 'TOP RATED' },
-            { key: 'new_dvds', title: 'NEW DVDS' },
-            { key: 'upcoming_dvds', title: 'UPCOMING DVDS' },
-            { key: 'top_rental', title: 'TOP RENTAL' },
-            { key: 'on_netflix', title: 'ON NETFLIX' },
-            { key: 'imdb_top_250', title: 'IMDB TOP 250' },
+            // { key: 'top_box_office', title: 'TOP BOX OFFICE' },
+            // { key: 'anticipated', title: 'ANTICIPATED' },
+            // { key: 'upcoming', title: 'UPCOMING' },
+            // { key: 'trending', title: 'TRENDING' },
+            // { key: 'top_rated', title: 'TOP RATED' },
+            // { key: 'new_dvds', title: 'NEW DVDS' },
+            // { key: 'upcoming_dvds', title: 'UPCOMING DVDS' },
+            // { key: 'top_rental', title: 'TOP RENTAL' },
+            // { key: 'on_netflix', title: 'ON NETFLIX' },
+            // { key: 'imdb_top_250', title: 'IMDB TOP 250' },
 
         ],
     };
@@ -42,16 +42,16 @@ export default class TabBarComponent extends Component {
 
     _renderScene = SceneMap({
         now_playing: MovieList,
-        top_box_office: MovieList,
-        anticipated: MovieList,
-        upcoming: MovieList,
-        trending: MovieList,
-        top_rated: MovieList,
-        new_dvds: MovieList,
-        upcoming_dvds: MovieList,
-        top_rental: MovieList,
-        on_netflix: MovieList,
-        imdb_top_250: MovieList,
+        // top_box_office: MovieList,
+        // anticipated: MovieList,
+        // upcoming: MovieList,
+        // trending: MovieList,
+        // top_rated: MovieList,
+        // new_dvds: MovieList,
+        // upcoming_dvds: MovieList,
+        // top_rental: MovieList,
+        // on_netflix: MovieList,
+        // imdb_top_250: MovieList,
     });
 
     render() {

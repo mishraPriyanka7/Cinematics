@@ -44,7 +44,7 @@ render() {
           </View> 
         )}>
         <View style={{ height:1200 }}>
-          <TabViewDetails data={this.props.data.id}/>
+          <TabViewDetails movieId ={this.props.data.id}/>
         </View>
       </ParallaxScrollView>
     );

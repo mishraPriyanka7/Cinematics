@@ -11,53 +11,32 @@ import {
   import { bindActionCreators } from 'redux';
   import {Actions} from 'react-native-router-flux';
 
-  //import fetchCastListData from '../actions/CastListAction'
+  import fetchCastListData from '../actions/CastListAction'
 
 
-   export default class CastList extends Component {
+    class CastList extends Component {
 
     constructor(props){
         super(props);
 
         this.state={
-            castList: [],      
+            castList: [],  
+            castId:'',    
         };
     }
 
     componentWillMount() {
-      //  this.props.fetchCastListData()
+       this.props.fetchCastListData(this.props.movieIds)
     }
 
     componentWillReceiveProps(nextProps) {
-        // if (nextProps.CastListData != '' && nextProps.CastListData != undefined) {
-        //    this.setState({ castList: nextProps.CastListData.CastListData.results }) // this will update state to re-render ui
-        //   //alert(JSON.stringify(nextProps.CastListData.CastListData.results));
-        // }
-       
+        if (nextProps.CastListData != '' && nextProps.CastListData != undefined) {
+           this.setState({ castList: nextProps.CastListData.CastListData.cast }) 
+        }   
    }
 
-   componentDidMount() {
-    
-    return fetch('https://api.themoviedb.org/3/movie/284053/credits?api_key=1b31282aebdebc34884006adfac40bfb')
-      .then((response) => response.json())
-      .then((responseJson) => {
-        this.setState({
-          isLoading: false,
-          castList: responseJson.cast
-          
-
-        }, function() {
-          // In this block you can do something with new state.
-        });
-       // alert(JSON.stringify(responseJson.results))
-      })
-      .catch((error) => {
-        console.error(error);
-      });
-
-  }
-
     render(){
+       
         return(
             <View style={Styles.mainContainer}>
             
@@ -69,7 +48,7 @@ import {
                             <View style = {{flex:1, flexDirection:'row', margin:10, paddingLeft:10,
                                 justifyContent:'center'}}>
                                     <View style={{flex: 0.3}}>
-                                    <TouchableOpacity  onPress={() => Actions.TabViewPeople()}>
+                                    <TouchableOpacity  onPress={() => Actions.TabViewPeople({castId:item.id})}>
                                         <Image source={{uri: "http://image.tmdb.org/t/p/w185"+item.profile_path}}
                                          style={{width:70, height:70, borderRadius:35}}/>
                                     </TouchableOpacity>
@@ -110,14 +89,14 @@ const Styles = StyleSheet.create({
 
 
 
-// function mapStateToProps(state) {
-//     return {
-//         CastListData: state.CastListData
-//     }
-// }
+function mapStateToProps(state) {
+    return {
+        CastListData: state.CastListData
+    }
+}
 
-// function mapDispatchToProps(dispatch) {
-//     return bindActionCreators({ fetchCastListData }, dispatch);
-// }
+function mapDispatchToProps(dispatch) {
+    return bindActionCreators({ fetchCastListData }, dispatch);
+}
 
-// export default connect(mapStateToProps, mapDispatchToProps)(CastList);
+export default connect(mapStateToProps, mapDispatchToProps)(CastList);

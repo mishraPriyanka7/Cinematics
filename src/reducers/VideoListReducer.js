@@ -1,38 +1,37 @@
-import { FETCHING_LIST, FETCHING_LIST_SUCCESS, FETCHING_LIST_FAILURE} from '../utils/constants'
+import { FETCHING_VIDEO_LIST, FETCHING_VIDEO_SUCCESS, FETCHING_VIDEO_FAILURE } from '../utils/constants'
 
 const initialState = {
-    SimilarMoviesListData: [],
+    VideoListData: [],
     isFetchingList: false,
     page: 1,
     error: false
 }
 
 
-export default function SimilarMoviesListReducer(state = initialState, action) {
+export default function VideoListReducer(state = initialState, action) {
 
     switch (action.type) {
 
-        case FETCHING_LIST:
+        case FETCHING_VIDEO_LIST:
             return {
                 ...state,
                 isFetchingList: true,
-                SimilarMoviesListData: []
+                VideoListData: []
             }
 
-        case FETCHING_LIST_SUCCESS:
+        case FETCHING_VIDEO_SUCCESS:
             return {
                 ...state,
                 isFetchingList: false,
-                SimilarMoviesListData: action.data
+                VideoListData: action.data
             }
 
-        case FETCHING_LIST_FAILURE:
+        case FETCHING_VIDEO_FAILURE:
             return {
                 ...state,
                 isFetchingList: false,
                 error: true
             }
-        
         default:
             return state
     }

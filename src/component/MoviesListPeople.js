@@ -22,7 +22,7 @@ import {
 
    componentDidMount() {
     
-    return fetch('https://api.themoviedb.org/3/person/74568/movie_credits?api_key=1b31282aebdebc34884006adfac40bfb&language=en-US')
+    return fetch('https://api.themoviedb.org/3/person/'+this.props.castIds+'/movie_credits?api_key=1b31282aebdebc34884006adfac40bfb&language=en-US')
       .then((response) => response.json())
       .then((responseJson) => {
         this.setState({

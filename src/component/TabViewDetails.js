@@ -11,13 +11,21 @@ const initialLayout = {
     width: Dimensions.get('window').width,
 };
 
-  //  alert("tab view details : "+this.props.data.id);
+  // alert("tab view details : "+this.props.movieId);
 
 export default class TabViewDetails extends Component {
+    
+    constructor(props) {
+        super(props);
+    
+        // this.state = {
+        //   movieId:'',
+        // };
+      }
 
     componentWillMount() {
-       // this.setState({movieList:this.props.moviesData});
-      // alert("tab view details *** : "+this.props.data.id);
+     //  alert("tab view details *** : "+this.props.movieId);
+      // this.setState({movieId: this.props.movieId});
 
      }
  
@@ -43,13 +51,28 @@ export default class TabViewDetails extends Component {
         labelStyle={styles.label}
     />;
 
-    _renderScene = SceneMap({
-        info: InfoDetails,
-        cast: CastDetails,
-        reviews: ReviewList,
-    });
+    // _renderScene = SceneMap({
+    //     info: InfoDetails,
+    //     cast: CastDetails,
+    //     reviews: ReviewList,
+        
+    // });
+
+    _renderScene = ({ route }) => {
+        switch (route.key) {
+        case 'info':
+          return <InfoDetails   movieIds ={this.props.movieId}/>;
+        case 'cast':
+          return <CastDetails movieIds ={this.props.movieId}/>;
+        case 'reviews':
+          return <ReviewList movieIds ={this.props.movieId}/>;
+        default:
+          return null;
+        }
+    } 
 
     render() {
+        
         return (
             <TabViewAnimated
                 style={styles.container}

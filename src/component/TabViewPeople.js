@@ -35,13 +35,23 @@ export default class TabViewPeople extends Component {
         labelStyle={styles.label}
     />;
 
-    _renderScene = SceneMap({
-        info: PeopleDetails,
-        movies: MoviesListPeople,
-        tv_shows: TvShowsList,
-    });
+
+    _renderScene = ({ route }) => {
+        switch (route.key) {
+        case 'info':
+          return <PeopleDetails   castIds ={this.props.castId}/>;
+        case 'movies':
+          return <MoviesListPeople castIds ={this.props.castId}/>;
+        case 'tv_shows':
+          return <TvShowsList castIds ={this.props.castId}/>;
+        default:
+          return null;
+        }
+    } 
+
 
     render() {
+       // alert("tab view People  cast Id ******* "+ this.props.castId);
         return (
             <TabViewAnimated
                 style={styles.container}

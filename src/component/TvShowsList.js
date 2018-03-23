@@ -7,9 +7,12 @@ import {
     Image,
     StyleSheet
   } from 'react-native';
+  
+  import { connect } from 'react-redux'
+  import { bindActionCreators } from 'redux';
+  import {fetchPeopleTvShowsData} from '../actions/PeopleDetailsAction';
 
-
-  export default class TvShowsList extends Component {
+ class TvShowsList extends Component {
 
     constructor(props){
         super(props);
@@ -18,26 +21,36 @@ import {
             tvShowsList: [],      
         };
     }
+
+    componentWillMount() {
+        this.props.fetchPeopleTvShowsData(this.props.castIds)
+     }
+ 
+     componentWillReceiveProps(nextProps) {
+         if (nextProps.PeopleTvShowData != '' && nextProps.PeopleTvShowData != undefined) {
+            this.setState({ tvShowsList: nextProps.PeopleTvShowData.PeopleTvShowData.cast })
+         }   
+    }
  
 
    componentDidMount() {
     
-    return fetch('https://api.themoviedb.org/3/person/74568/tv_credits?api_key=1b31282aebdebc34884006adfac40bfb&language=en-US')
-      .then((response) => response.json())
-      .then((responseJson) => {
-        this.setState({
-          isLoading: false,
-          tvShowsList: responseJson.cast
+    // return fetch('https://api.themoviedb.org/3/person/'+this.props.castIds+'/tv_credits?api_key=1b31282aebdebc34884006adfac40bfb&language=en-US')
+    //   .then((response) => response.json())
+    //   .then((responseJson) => {
+    //     this.setState({
+    //       isLoading: false,
+    //       tvShowsList: responseJson.cast
           
 
-        }, function() {
+    //     }, function() {
           
-        });
-       // alert(JSON.stringify(responseJson.results))
-      })
-      .catch((error) => {
-        console.error(error);
-      });
+    //     });
+    //    // alert(JSON.stringify(responseJson.results))
+    //   })
+    //   .catch((error) => {
+    //     console.error(error);
+    //   });
 
   }
 
@@ -111,3 +124,16 @@ const Styles = StyleSheet.create({
         
     },
   });
+
+  function mapStateToProps(state) {
+    //alert("** People Details ** "+JSON.stringify(state.PeopleDetails))
+    return {
+        PeopleTvShowData: state.PeopleTvShowData,
+    }
+}
+
+function mapDispatchToProps(dispatch) {
+    return bindActionCreators({ fetchPeopleTvShowsData }, dispatch);
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(TvShowsList);

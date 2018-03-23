@@ -9,6 +9,7 @@ import TabViewExample from "../src/component/TabViewExample";
 import Splash from "../src/component/Splash";
 import TabViewPeople from '../src/component/TabViewPeople';
 import TabViewDetails from '../src/component/TabViewDetails';
+import InfoDetails from '../src/component/InfoDetails';
 
 export default class RouterComponent extends Component {
   render() {
@@ -56,6 +57,10 @@ export default class RouterComponent extends Component {
             key="TabViewDetails"
             component={TabViewDetails}
             title="Tab View Details"
+          />
+          <Scene 
+            key="InfoDetails"
+            component={InfoDetails}
           />
         
         </Scene>

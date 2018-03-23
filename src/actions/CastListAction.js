@@ -1,10 +1,10 @@
 import { FETCHING_CAST_LIST, FETCHING_CAST_LIST_SUCCESS, FETCHING_CAST_LIST_FAILURE } from '../utils/constants'
 
-export default function fetchMovieData() {
+export default function fetchMovieData(movieId) {
 
     return (dispatch) => {
         dispatch(getLisData())
-        fetch("https://api.themoviedb.org/3/person/2?api_key=1b31282aebdebc34884006adfac40bfb&language=en-US")
+        fetch("https://api.themoviedb.org/3/movie/"+movieId+"/credits?api_key=1b31282aebdebc34884006adfac40bfb")
             .then(res => res.json())
             .then(json => dispatch(getListDataSuccess(json)))
             .catch(err => dispatch(getListDataFailure(err)))
